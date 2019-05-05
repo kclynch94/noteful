@@ -1,0 +1,38 @@
+.FolderNav_list {
+    list-style-type: none;
+    margin: 130px 0 0;
+    padding: 0;
+  }
+
+.FolderNav_folder-link {
+    background-color: #030f1f;
+    color: #b5b3b3;
+    display: block;
+    font-family: var(--custom-font);
+    font-size: 20px;
+    margin: 0 0 8px auto;
+    max-width: 180px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.FolderNav_folder-link:hover {
+    color: blue;
+    cursor: pointer;
+}
+.FolderNav_folder-link.active {
+    background-color: #102541;
+}
+
+.FolderNav_button-wrapper {
+    margin: 0 0 0 auto;
+    max-width: 180px;
+}
+  
+.FolderNav_add-folder-button {
+    margin: 20px auto;
+}
+
+.FolderNav_add-folder-button:hover {
+    background-color: #29862e;
+    color: white;
+}

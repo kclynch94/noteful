@@ -1,0 +1,6 @@
+.NotePageNav_back-button {
+    margin: 45px 20px 25px auto
+}
+.NotePageNav_back-button:hover {
+    background-color: #FFB72F;
+}
