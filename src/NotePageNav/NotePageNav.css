@@ -1,5 +1,20 @@
+.NotePageNav {
+    padding-left: 20%;
+    padding-top: 25%;
+}
+
 .NotePageNav_back-button {
-    margin: 45px 20px 25px auto
+    background-color: #010d1e;
+    border-radius: 4px;
+    border: 0;
+    width: 100px;
+    color: #cacaca;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
 }
 .NotePageNav_back-button:hover {
     background-color: #FFB72F;

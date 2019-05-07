@@ -15,7 +15,7 @@ class FolderNav extends Component {
                     {folderList}
                 </ul>
                 <div className='FolderNav_button-wrapper'>
-                    <NavLink to='/add-folder' className='NoteList_add-folder-button'>
+                    <NavLink to='/add-folder' className='FolderNav_add-folder-button'>
                         Add folder
                     </NavLink>
                 </div>

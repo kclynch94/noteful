@@ -5,8 +5,9 @@ import NoteList from './NoteList/NoteList';
 import NotePageNav from './NotePageNav/NotePageNav';
 import NotePageMain from './NotePageMain/NotePageMain';
 import ApiContext from './ApiContext';
-import AddFolder from './AddFolder/AddFolder'
-import AddNote from './AddNote/AddNote'
+import AddFolder from './AddFolder/AddFolder';
+import AddNote from './AddNote/AddNote';
+import FormError from './NotefulForm/FormError';
 import config from './config';
 import './App.css';
 
@@ -119,14 +120,16 @@ class App extends Component {
               path='/note/:noteId'
               component={NotePageMain}
             />
-            <Route
-              path='/add-folder'
-            component={AddFolder}
-            />
-            <Route
-              path='/add-note'
-              component={AddNote}
-            />
+            <FormError>
+              <Route
+                path='/add-folder'
+              component={AddFolder}
+              />
+              <Route
+                path='/add-note'
+                component={AddNote}
+              />
+            </FormError>
           </main>
         </div>
       </ApiContext.Provider>

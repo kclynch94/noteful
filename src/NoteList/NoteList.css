@@ -10,7 +10,17 @@
   }
   
   .NoteList_add-note-button {
-    margin: 0 auto 20px;
+    background-color: #010d1e;
+    border-radius: 4px;
+    border: 0;
+    width: 100px;
+    color: #cacaca;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
   }
   .NoteList_add-note-button:hover {
     background-color: #29862e;
