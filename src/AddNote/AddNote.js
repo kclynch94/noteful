@@ -29,10 +29,9 @@ export default class AddNote extends Component {
   handleSubmit = e => {
     e.preventDefault()
     const newNote = {
-      name: e.target['note-name'].value,
-      content: e.target['note-content'].value,
-      folderId: e.target['note-folder-id'].value,
-      modified: new Date(),
+      note_name: e.target['note_name'].value,
+      content: e.target['content'].value,
+      folder: e.target['folder'].value,
     }
     fetch(`${config.API_ENDPOINT}/notes`, {
       method: 'POST',
@@ -48,7 +47,7 @@ export default class AddNote extends Component {
       })
       .then(note => {
         this.context.addNote(note)
-        this.props.history.push(`/folder/${note.folderId}`)
+        this.props.history.push(`/folder/${note.folder}`)
       })
       .catch(error => {
         console.error({ error })
@@ -96,24 +95,24 @@ export default class AddNote extends Component {
             <label htmlFor='note-name-input'>
               Name
             </label>
-            <input type='text' id='note-name-input' name='note-name' onChange={e => this.updateNoteName(e.target.value)} />
+            <input type='text' id='note-name-input' name='note_name' onChange={e => this.updateNoteName(e.target.value)} />
             <ValidationError hasError={!this.state.noteNameValid} message={this.state.noteValidationMessages.noteName}/>
           </div>
           <div className='field'>
             <label htmlFor='note-content-input'>
               Content
             </label>
-            <textarea id='note-content-input' name='note-content' />
+            <textarea id='note-content-input' name='content' />
           </div>
           <div className='field'>
             <label htmlFor='note-folder-select'>
               Folder
             </label>
-            <select id='note-folder-select' name='note-folder-id'>
+            <select id='note-folder-select' name='folder'>
               <option value={null}>...</option>
               {folders.map(folder =>
                 <option key={folder.id} value={folder.id}>
-                  {folder.name}
+                  {folder.folder_name}
                 </option>
               )}
             </select>

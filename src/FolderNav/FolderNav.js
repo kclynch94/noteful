@@ -8,7 +8,7 @@ class FolderNav extends Component {
 
     render() {
         const { folders=[] } = this.context
-        const folderList = folders.map(f => (<li key={f.id}><NavLink className='FolderNav_folder-link'to={`/folder/${f.id}`}>{f.name}</NavLink></li>))
+        const folderList = folders.map(f => (<li key={f.id}><NavLink className='FolderNav_folder-link'to={`/folder/${f.id}`}>{f.folder_name}</NavLink></li>))
         return(
             <div className='FolderNav'>
                 <ul className='FolderNav_list'>

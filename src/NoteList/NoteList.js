@@ -15,12 +15,12 @@ class NoteList extends Component {
     render() {
         const { folderId } = this.props.match.params
         const { notes=[] } = this.context
-        const notesList = folderId ? notes.filter(note => note.folderId===folderId).map(n => (
+        const notesList = folderId ? notes.filter(note => note.folder === +folderId).map(n => (
             <li key={n.id}>
                 <Note
                     id={n.id}
-                    name={n.name}
-                    modified={n.modified}
+                    name={n.note_name}
+                    modified={new Date(n.date_modified)}
                     onDeleteNote={this.handleDeleteNote}               
                 />
             </li>) 
@@ -28,8 +28,8 @@ class NoteList extends Component {
             <li key={n.id}>
                 <Note
                     id={n.id}
-                    name={n.name}
-                    modified={n.modified}
+                    name={n.note_name}
+                    modified={new Date(n.date_modified)}
                     onDeleteNote={this.handleDeleteNote}               
                 />
             </li>) );
